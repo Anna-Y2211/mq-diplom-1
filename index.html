@@ -13,6 +13,11 @@
         <a href="#">
           <img src="svg/noemi-logo.svg" alt="noemi" class="logo" width="180">
         </a>
+        <div class="burger-menu">
+          <div class="burger">
+            <span></span>
+       </div>
+    </div>
         <nav class="header-navigation">
           <ul class="menu">
             <li class="menu-item">
@@ -510,9 +515,18 @@
   </h2>
   <section class="shop-section">
     <div class="wrp-description">
-      <figure class="shop-post-media">
-        <img src="images/shop-item-desk1.jpg" alt="подушка" class="shop-post-image">
-      </figure>
+      <picture>
+        <source 
+        media="(min-width: 1200px)"
+        srcset="images/shop-item-desk1.jpg">
+        <source 
+        media="(min-width: 641px) and (max-width: 1200px)"
+        srcset="images/shop-item-tablet1.jpg">
+        <source 
+        media="(max-width: 640px)"
+        srcset="images/shop-item-mobile1.jpg">
+        <img class="shop-post-image" src="images/shop-item-desk1.jpg" alt="подушка">
+      </picture>
       <div class="shop-description">
         <h3 class="new-post-tittle">
           <a class="new-post-tittle-link" href="#">
@@ -531,9 +545,18 @@
       </div>
     </div>
     <div class="wrp-description">
-      <figure class="shop-post-media">
-        <img src="images/shop-item-desk2.jpg" alt="зайчик" class="shop-post-image">
-      </figure>
+      <picture>
+        <source 
+        media="(min-width: 1200px)"
+        srcset="images/shop-item-desk2.jpg">
+        <source 
+        media="(min-width: 641px) and (max-width: 1200px)"
+        srcset="images/shop-item-tablet2.jpg">
+        <source 
+        media="(max-width: 640px)"
+        srcset="images/shop-item-mobile2.jpg">
+        <img class="shop-post-image" src="images/shop-item-desk2.jpg" alt="зайчик">
+      </picture>
       <div class="shop-description">
         <h3 class="new-post-tittle">
           <a class="new-post-tittle-link" href="#">
@@ -551,9 +574,18 @@
       </div>
     </div>
     <div class="wrp-description">
-      <figure class="shop-post-media">
-        <img src="images/shop-item-desk3.jpg" alt="рамка" class="shop-post-image">
-      </figure>
+      <picture>
+        <source 
+        media="(min-width: 1200px)"
+        srcset="images/shop-item-desk3.jpg">
+        <source 
+        media="(min-width: 641px) and (max-width: 1200px)"
+        srcset="images/shop-item-tablet3.jpg">
+        <source 
+        media="(max-width: 640px)"
+        srcset="images/shop-item-mobile3.jpg">
+        <img class="shop-post-image" src="images/shop-item-desk3.jpg" alt="рамка">
+      </picture>
       <div class="shop-description">
         <h3 class="new-post-tittle">
           <a class="new-post-tittle-link" href="#">
@@ -602,5 +634,37 @@
       Copyright &copy 2009-2019 City Blog LLC.
     </div>
   </footer>
+
+  <div class="popup-wrp">
+    <div class="popup-close-content">
+      <div class="popup-content">
+        <label for="popup-content" class="popup-close">&times;</label>
+      </div>
+      <div class="popup">
+        <label for="popup" class="btn">открыть окно</label>
+        <h2 class="new popup-title">Ваш фидбек</h2>
+        <form class="form">
+          <div class="form-popap">
+            <span class="span">Как часто вы заходите на сайт?</span>
+            <select class="select">
+              <option class="value">Почти каждый день</option>
+            </select>
+          </div>
+          <div class="radio">
+            <span class="span-radio">Вы подписаны на e-mail рассылку?</span>
+            <div class="radio-btn">
+              <input type="radio" name="yes">Да
+              <input type="radio" name="no">Нет
+            </div>
+          </div>
+          <div class="text-popup">
+            <span class="form-hint">Расскажите, какой контент вы бы хотели видеть на нашем сайте?</span>
+            <textarea class="textarea" placeholder="Может, больше рецептов?" required></textarea>
+          </div>
+          <button class="button-form" type="reset">Отправить</button>
+      </div>
+      </form>
+    </div>
+
 </body>
 </html>
